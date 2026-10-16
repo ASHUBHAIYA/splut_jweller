@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  /* Soft Violet theme: every accent family maps to violet; neutrals lean slightly purple */
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
+  --color-blue-50: #f5f3ff;
+  --color-blue-100: #ede9fe;
+  --color-blue-200: #ddd6fe;
+  --color-blue-300: #c4b5fd;
+  --color-blue-400: #a78bfa;
+  --color-blue-500: #8b5cf6;
+  --color-blue-600: #7c3aed;
+  --color-blue-700: #6d28d9;
+  --color-blue-800: #5b21b6;
+  --color-blue-900: #4c1d95;
+  --color-blue-950: #2e1065;
+  --color-sky-50: #f5f3ff;
+  --color-sky-100: #ede9fe;
+  --color-sky-200: #ddd6fe;
+  --color-sky-300: #c4b5fd;
+  --color-sky-400: #a78bfa;
+  --color-sky-500: #8b5cf6;
+  --color-sky-600: #7c3aed;
+  --color-sky-700: #6d28d9;
+  --color-sky-800: #5b21b6;
+  --color-sky-900: #4c1d95;
+  --color-sky-950: #2e1065;
+  --color-amber-50: #f5f3ff;
+  --color-amber-100: #ede9fe;
+  --color-amber-200: #ddd6fe;
+  --color-amber-300: #c4b5fd;
+  --color-amber-400: #a78bfa;
+  --color-amber-500: #8b5cf6;
+  --color-amber-600: #7c3aed;
+  --color-amber-700: #6d28d9;
+  --color-amber-800: #5b21b6;
+  --color-amber-900: #4c1d95;
+  --color-amber-950: #2e1065;
+  --color-indigo-50: #f5f3ff;
+  --color-indigo-100: #ede9fe;
+  --color-indigo-200: #ddd6fe;
+  --color-indigo-300: #c4b5fd;
+  --color-indigo-400: #a78bfa;
+  --color-indigo-500: #8b5cf6;
+  --color-indigo-600: #7c3aed;
+  --color-indigo-700: #6d28d9;
+  --color-indigo-800: #5b21b6;
+  --color-indigo-900: #4c1d95;
+  --color-indigo-950: #2e1065;
+  --color-purple-50: #f5f3ff;
+  --color-purple-100: #ede9fe;
+  --color-purple-200: #ddd6fe;
+  --color-purple-300: #c4b5fd;
+  --color-purple-400: #a78bfa;
+  --color-purple-500: #8b5cf6;
+  --color-purple-600: #7c3aed;
+  --color-purple-700: #6d28d9;
+  --color-purple-800: #5b21b6;
+  --color-purple-900: #4c1d95;
+  --color-purple-950: #2e1065;
+  --color-slate-50: #faf8fe;
+  --color-slate-100: #f5f1fc;
+  --color-slate-200: #e8e1f5;
+  --color-slate-300: #d6cdea;
+  --color-slate-400: #9a90b8;
+  --color-slate-500: #6f6590;
+  --color-slate-600: #574d78;
+  --color-slate-700: #43395f;
+  --color-slate-800: #33294d;
+  --color-slate-900: #251c3d;
+  --color-slate-950: #1b1330;
+}
+
+@layer base {
+  /* Selected text: light violet background, dark text */
+  ::selection {
+    background-color: #ddd6fe;
+    color: #2e1065;
+  }
+
+  body {
+    background-color: #f8f5fd;
+  }
+
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Dropdown lists must stay readable on dark panels: the open list is drawn by the browser
+   with the select's text colour, so give every option an explicit dark-on-light palette. */
+select option,
+select optgroup {
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Soft violet polish */
+:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+input[type="checkbox"], input[type="radio"] {
+  accent-color: #7c3aed;
+}
